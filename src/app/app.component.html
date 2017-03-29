@@ -1,3 +1,30 @@
-<h1>
-  {{title}}
-</h1>
+<div *ngFor="let keg of kegs | filterTapped" class="panel panel-default">
+  <div class="panel-heading">
+    <h3><em>{{keg.name}}</em> by <strong>{{keg.brewery}}</strong></h3>
+  </div>
+  <div class="panel panel-body">
+    <div class="row">
+      <div class="col-xs-6">
+        <ul>
+          <li>Origin: {{keg.origin}}</li>
+          <li>{{keg.price | currency:'USD':true}}</li>
+          <li>ABV: {{keg.alcholContent}}</li>
+          <li>Pints Left: {{keg.size}}</li>
+          <li>Kegs Left: {{keg.inventory}}</li>
+        </ul>
+      </div>
+      <div class="col-xs-6 btns">
+        <div class="form-group">
+          <button type="button" class="btn btn-xs btn-success" name="button">1 pint</button><br>
+        </div>
+        <div class="form-group">
+          <button type="button" class="btn btn-sm btn-warning" name="button">1 Growler</button><br>
+        </div>
+        <div class="form-group">
+          <button type="button" class="btn btn-md btn-danger" name="button">1 Lg Growler</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

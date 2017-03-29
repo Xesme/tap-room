@@ -4,10 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { FilterTappedPipe } from './filter-tapped.pipe';
+import { SearchPipe } from './search.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FilterTappedPipe,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

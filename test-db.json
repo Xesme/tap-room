@@ -1,0 +1,28 @@
+{
+  "kegs":[
+    {
+      "name": "Blind Pig - IPA",
+      "brewery": "Russian River",
+      "size": 8,
+      "price": 5,
+      "alcholContent": "6.1%",
+      "origin": "CA"
+    },
+    {
+      "name": "Bone-A-Fide - Pale",
+      "brewery": "Boneyard",
+      "size": 8,
+      "price": 5,
+      "alcholContent": "5.5%",
+      "origin": "BND"
+    },
+    {
+      "name": "Saison Dupont",
+      "brewery": "Dupont",
+      "size": 8,
+      "price": 6,
+      "alcholContent": "6.5%",
+      "origin": "BEL"
+    }
+  ]
+}

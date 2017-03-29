@@ -1,5 +1,10 @@
 # TapRoom
 
+## Created by Xia Amendolara and Matt Kelley
+
+# Description
+This application streamlines the hard task of managing kegs in the service industry. It tracks the volume of beer left in kegs to assist bar staff with a necessary tool of product management.  
+
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
 
 ## Development server
@@ -26,6 +31,21 @@ Before running the tests make sure you are serving the app via `ng serve`.
 
 Run `ng github-pages:deploy` to deploy to GitHub Pages.
 
+## Development Strategy
+
+1. Add initial files inside of project folder using $ ng init
+2. Install dependencies and install project management
+  * $ npm install 
+  * $ bower install
+3. Update README.md with licensing and author details
+4.
+
+
 ## Further help
 
 To get more help on the `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Licensing
+This application features MIT licensing.
+
+Copyright &copy; 2017 **Xia Amendolara and Matt Kelley** All Rights Reserved.
