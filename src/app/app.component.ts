@@ -13,32 +13,15 @@ export class AppComponent implements OnInit {
   kegs: FirebaseListObservable<any[]>;
 
   constructor (private kegService: KegService ) { }
-  // kegs: Keg[] = [];
   ngOnInit(){
-    // firebase.database().ref("/kegs/").on("child_added", (snapshot) => {this.kegs.push(snapshot.val())});
     this.kegs = this.kegService.getKegs();
   }
 
-  // sellPint(keg:Keg){
-  //   var pos = this.kegs.indexOf(keg);
-  //   // console.log(pos);
-  //   keg.size = keg.size -1;
-  //   firebase.database().ref("/kegs/1").set({
-  //     name: keg.name,
-  //     brewery: keg.brewery,
-  //     price: keg.price,
-  //     tapped: keg.tapped,
-  //     inventory: keg.inventory,
-  //     origin: keg.origin,
-  //     size: keg.size,
-  //     alcholContent: keg.alcholContent
-  //   })
-  //   // console.log(firebase.database().ref("/kegs"));
-  // }
+  sellPint(keg:Keg){
+    keg.size = keg.size -1;
 
-  // create(){
-  //   firebase.database().ref("/kegs/").push({dasd:dasda});
-  // }
+    this.kegService.sellPint(keg, keg.size)
+  }
 
 }
 
