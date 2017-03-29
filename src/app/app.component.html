@@ -1,4 +1,4 @@
-<div *ngFor="let keg of kegs | filterTapped" class="panel panel-default">
+<div *ngFor="let keg of kegs | async" class="panel panel-default">
   <div class="panel-heading">
     <h3><em>{{keg.name}}</em> by <strong>{{keg.brewery}}</strong></h3>
   </div>
@@ -15,13 +15,13 @@
       </div>
       <div class="col-xs-6 btns">
         <div class="form-group">
-          <button type="button" class="btn btn-xs btn-success" name="button">1 pint</button><br>
+          <button type="button" class="btn btn-xs btn-success" (click)="sellPint(keg)">Pint</button><br>
         </div>
         <div class="form-group">
-          <button type="button" class="btn btn-sm btn-warning" name="button">1 Growler</button><br>
+          <button type="button" class="btn btn-sm btn-warning">Growler</button><br>
         </div>
         <div class="form-group">
-          <button type="button" class="btn btn-md btn-danger" name="button">1 Lg Growler</button>
+          <button type="button" class="btn btn-md btn-danger">Lg Growler</button>
         </div>
       </div>
 

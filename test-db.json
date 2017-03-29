@@ -3,26 +3,32 @@
     {
       "name": "Blind Pig - IPA",
       "brewery": "Russian River",
-      "size": 8,
+      "size": 66,
       "price": 5,
       "alcholContent": "6.1%",
-      "origin": "CA"
+      "origin": "CA",
+      "inventory": 3,
+      "tapped": false
     },
     {
       "name": "Bone-A-Fide - Pale",
       "brewery": "Boneyard",
-      "size": 8,
+      "size": 66,
       "price": 5,
       "alcholContent": "5.5%",
-      "origin": "BND"
+      "origin": "BND",
+      "inventory": 1,
+      "tapped": false
     },
     {
       "name": "Saison Dupont",
       "brewery": "Dupont",
-      "size": 8,
+      "size": 66,
       "price": 6,
       "alcholContent": "6.5%",
-      "origin": "BEL"
+      "origin": "BEL",
+      "inventory": 5,
+      "tapped": false
     }
   ]
 }
