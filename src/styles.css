@@ -15,3 +15,17 @@
   margin-left: 3%;
   margin-right: 3%;
 }
+
+.almost .panel-heading{
+  background-color: #D9403D;
+}
+.g2g .panel-heading{
+  background-color: #3DD6D9;
+}
+
+.dead .panel-heading{
+  background-color: black;
+}
+.dead .panel-heading h3{
+  color: white;
+}

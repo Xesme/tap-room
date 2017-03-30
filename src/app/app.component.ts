@@ -19,6 +19,16 @@ export class AppComponent implements OnInit {
     this.kegs = this.kegService.getKegs();
   }
 
+  checkColor(keg){
+    if (keg.size==0) {
+        return "dead";
+    }else if(keg.size<10){
+      return "almost";
+    }else{
+      return "g2g";
+    }
+  }
+
   showKeg(keg:Keg){
     if(this.selectedKeg == keg.name){
       this.selectedKeg = null
