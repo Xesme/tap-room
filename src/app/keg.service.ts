@@ -20,7 +20,7 @@ export class KegService {
 
   sellPint(keg, newSize){
     var keginFB = this.findKeg(keg);
-    keginFB.update({size:newSize})
+    keginFB.update({size:newSize});
   }
 
   sellGrowler(keg, newSize){

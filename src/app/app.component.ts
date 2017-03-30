@@ -12,7 +12,7 @@ import { EditKegComponent } from './edit-keg/edit-keg.component';
 })
 export class AppComponent implements OnInit {
   kegs: FirebaseListObservable<any[]>;
-  selectedKeg = null;
+  selectedKeg;
 
   constructor (private kegService: KegService ) { }
   ngOnInit(){
@@ -27,10 +27,15 @@ export class AppComponent implements OnInit {
     }
   }
 
+  showLog(){
+    console.log(this.selectedKeg)
+  }
+
   sellPint(keg:Keg){
     keg.size = keg.size -1;
 
     this.kegService.sellPint(keg, keg.size)
+    console.log(this.selectedKeg);
   }
 
   sellGrowler(keg:Keg){
@@ -48,6 +53,10 @@ export class AppComponent implements OnInit {
   editKeg($event){
     // alert($event.brewery);
     this.kegService.editKeg($event);
+  }
+
+  openModal(keg){
+    console.log(keg)
   }
 
 }

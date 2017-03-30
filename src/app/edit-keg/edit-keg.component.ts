@@ -26,12 +26,13 @@ export class EditKegComponent {
   }
 
   openModal(keg){
-    var elem = document.getElementById("editModal-"+keg.$key);
+    console.log(keg)
+    var elem = document.getElementById("editModal");
     elem.className = "modal show";
   }
 
   closeModal(keg){
-    var elem = document.getElementById("editModal-"+keg.$key);
+    var elem = document.getElementById("editModal");
     elem.className = "modal fade";
   }
 }

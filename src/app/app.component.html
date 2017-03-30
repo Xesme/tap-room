@@ -1,10 +1,11 @@
 <div class="container">
   <h1>Kegs</h1>
+  <button type="button" (click)="showLog()"></button>
   <div *ngFor="let keg of kegs | async" class="panel panel-default">
     <div class="panel-heading" (click)="showKeg(keg)">
       <h3><em>{{keg.name}}</em> by <strong>{{keg.brewery}}</strong></h3>
     </div>
-    <div class="panel panel-body" *ngIf="selectedKeg == keg ">
+    <div class="panel panel-body" *ngIf="selectedKeg == keg">
       <div class="row">
         <div class="col-xs-6">
           <ul>
