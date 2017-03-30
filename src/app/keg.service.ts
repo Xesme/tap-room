@@ -33,6 +33,14 @@ export class KegService {
     keginFB.update({size:newSize})
   }
 
+  kegInv(keg, newInv){
+    var keginFB = this.findKeg(keg);
+    keginFB.update({
+      size:66,
+      inventory: newInv
+    })
+  }
+
   editKeg(event){
     var keginFB = this.findKeg(event.keg);
     keginFB.update({

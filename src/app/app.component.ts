@@ -20,10 +20,10 @@ export class AppComponent implements OnInit {
   }
 
   showKeg(keg:Keg){
-    if(this.selectedKeg == keg){
+    if(this.selectedKeg == keg.name){
       this.selectedKeg = null
     }else{
-      this.selectedKeg = keg;
+      this.selectedKeg = keg.name;
     }
   }
 
@@ -48,6 +48,12 @@ export class AppComponent implements OnInit {
     keg.size = keg.size -4;
 
     this.kegService.sellLgGrowler(keg, keg.size)
+  }
+
+  kegInv(keg:Keg){
+    keg.inventory = keg.inventory - 1;
+    this.kegService.kegInv(keg, keg.inventory)
+
   }
 
   editKeg($event){
