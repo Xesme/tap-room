@@ -12,10 +12,19 @@ import { EditKegComponent } from './edit-keg/edit-keg.component';
 })
 export class AppComponent implements OnInit {
   kegs: FirebaseListObservable<any[]>;
+  selectedKeg = null;
 
   constructor (private kegService: KegService ) { }
   ngOnInit(){
     this.kegs = this.kegService.getKegs();
+  }
+
+  showKeg(keg:Keg){
+    if(this.selectedKeg == keg){
+      this.selectedKeg = null
+    }else{
+      this.selectedKeg = keg;
+    }
   }
 
   sellPint(keg:Keg){
@@ -45,5 +54,6 @@ export class AppComponent implements OnInit {
 
 export class Keg {
   public tapped: boolean = false;
+  public display: boolean = false;
   constructor(public name: string, public brewery: any, public alcholContent: string, public price: number, public size: number, public origin: string, public inventory: number) { }
 }
