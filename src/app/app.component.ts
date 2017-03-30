@@ -23,6 +23,18 @@ export class AppComponent implements OnInit {
     this.kegService.sellPint(keg, keg.size)
   }
 
+  sellGrowler(keg:Keg){
+    keg.size = keg.size -2;
+
+    this.kegService.sellGrowler(keg, keg.size)
+  }
+
+  sellLgGrowler(keg:Keg){
+    keg.size = keg.size -4;
+
+    this.kegService.sellLgGrowler(keg, keg.size)
+  }
+
 }
 
 export class Keg {

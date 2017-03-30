@@ -1,30 +1,43 @@
-<div *ngFor="let keg of kegs | async" class="panel panel-default">
-  <div class="panel-heading">
-    <h3><em>{{keg.name}}</em> by <strong>{{keg.brewery}}</strong></h3>
-  </div>
-  <div class="panel panel-body">
-    <div class="row">
-      <div class="col-xs-6">
-        <ul>
-          <li>Origin: {{keg.origin}}</li>
-          <li>{{keg.price | currency:'USD':true}}</li>
-          <li>ABV: {{keg.alcholContent}}</li>
-          <li>Pints Left: {{keg.size}}</li>
-          <li>Kegs Left: {{keg.inventory}}</li>
-        </ul>
-      </div>
-      <div class="col-xs-6 btns">
-        <div class="form-group">
-          <button type="button" class="btn btn-xs btn-success" (click)="sellPint(keg)">Pint</button><br>
+<div class="container">
+  <h1>Kegs</h1>
+  <div *ngFor="let keg of kegs | async" class="panel panel-default">
+    <div class="panel-heading">
+      <h3><em>{{keg.name}}</em> by <strong>{{keg.brewery}}</strong></h3>
+    </div>
+    <div class="panel panel-body">
+      <div class="row">
+        <div class="col-xs-6">
+          <ul>
+            <li>Origin: {{keg.origin}}</li>
+            <li>{{keg.price | currency:'USD':true}}</li>
+            <li>ABV: {{keg.alcholContent}}</li>
+            <li>Pints Left: {{keg.size}}</li>
+            <li>Kegs Left: {{keg.inventory}}</li>
+          </ul>
         </div>
-        <div class="form-group">
-          <button type="button" class="btn btn-sm btn-warning">Growler</button><br>
+        <div class="col-xs-6 btns">
+          <div class="form-group">
+            <button type="button" class="btn btn-xs btn-success" (click)="sellPint(keg)">Pint</button><br>
+          </div>
+          <div class="form-group">
+            <button type="button" class="btn btn-sm btn-warning" (click)="sellGrowler(keg)">Growler</button><br>
+          </div>
+          <div class="form-group">
+            <button type="button" class="btn btn-md btn-danger" (click)="sellLgGrowler(keg)">Lg Growler</button>
+          </div>
         </div>
-        <div class="form-group">
-          <button type="button" class="btn btn-md btn-danger">Lg Growler</button>
-        </div>
-      </div>
 
+      </div>
+    </div>
+    <div class="panel panel-footer">
+      <div class="row btn-row">
+        <div class="col-xs-3">
+          <button type="button" class="btn btn-xs btn-info">Edit</button>
+        </div>
+        <div class="col-xs-3">
+          <button type="button" class="btn btn-xs btn-primary">Delete</button>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -22,4 +22,14 @@ export class KegService {
     var keginFB = this.findKeg(keg);
     keginFB.update({size:newSize})
   }
+
+  sellGrowler(keg, newSize){
+    var keginFB = this.findKeg(keg);
+    keginFB.update({size:newSize})
+  }
+
+  sellLgGrowler(keg, newSize){
+    var keginFB = this.findKeg(keg);
+    keginFB.update({size:newSize})
+  }
 }

@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+
+.panel-body, .panel-footer{
+  margin-bottom: 0;
+}
+
+.panel-footer .btn-row{
+  position: inherit;
+  margin-left: 85%;
+  padding-right: 5%;
+}
+
+.btn-row .col-xs-3{
+  /*width: 25%;*/
+  margin-left: 3%;
+  margin-right: 3%;
+}
