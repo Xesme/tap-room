@@ -53,6 +53,18 @@ export class KegService {
     })
   }
 
+  addKeg(event){
+    this.kegs.push({
+      name: event.name,
+      brewery: event.brewery,
+      origin: event.origin,
+      price: event.price,
+      alcholContent: event.abv,
+      inventory: event.inv,
+      size: 66
+    })
+  }
+
   deleteKeg(keg){
     var keginFB = this.findKeg(keg);
     keginFB.remove()

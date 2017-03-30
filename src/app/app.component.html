@@ -1,5 +1,6 @@
 <div class="container">
   <h1>Kegs</h1>
+  <app-new-keg (clickSender)="addKeg($event)"></app-new-keg>
   <div *ngFor="let keg of kegs | async" class="panel panel-default">
     <div class="panel-heading" (click)="showKeg(keg)">
       <h3><em>{{keg.name}}</em> by <strong>{{keg.brewery}}</strong></h3>
