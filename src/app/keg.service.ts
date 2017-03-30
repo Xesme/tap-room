@@ -32,4 +32,16 @@ export class KegService {
     var keginFB = this.findKeg(keg);
     keginFB.update({size:newSize})
   }
+
+  editKeg(event){
+    var keginFB = this.findKeg(event.keg);
+    keginFB.update({
+      name: event.name,
+      brewery: event.brewery,
+      origin: event.origin,
+      price: event.price,
+      alcholContent: event.abv,
+      inventory: event.inv
+    })
+  }
 }

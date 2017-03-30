@@ -32,10 +32,10 @@
     <div class="panel panel-footer">
       <div class="row btn-row">
         <div class="col-xs-3">
-          <button type="button" class="btn btn-xs btn-info">Edit</button>
+          <app-edit-keg (clickSender)="editKeg($event)" [keg]="keg"></app-edit-keg>
         </div>
         <div class="col-xs-3">
-          <button type="button" class="btn btn-xs btn-primary">Delete</button>
+          <button type="button" class="btn btn-xs btn-primary" (action)="deleteKeg()">Delete</button>
         </div>
       </div>
     </div>

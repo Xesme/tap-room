@@ -7,6 +7,7 @@ import { FilterTappedPipe } from './filter-tapped.pipe';
 import { SearchPipe } from './search.pipe';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
+import { EditKegComponent } from './edit-keg/edit-keg.component';
 
 
 export const firebaseConfig = {
@@ -20,7 +21,8 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     FilterTappedPipe,
-    SearchPipe
+    SearchPipe,
+    EditKegComponent
   ],
   imports: [
     BrowserModule,

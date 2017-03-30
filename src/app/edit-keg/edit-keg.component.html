@@ -1,0 +1,42 @@
+<button type="button" class="btn btn-xs btn-info" data-toggle="modal"  (click)="openModal(keg)">Edit</button>
+<!-- Question Modal -->
+<div class="modal fade" id="editModal-{{keg.$key}}" tabindex="-1" role="dialog" aria-labelledby="editModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content form-group">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeModal(keg)" ><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Edit Keg</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label class="control-label" for="edit_title">Keg Name:</label>
+          <input type="text" #kegName value="{{keg.name}}">
+        </div>
+        <div class="form-group">
+          <label class="control-label" for="edit_title">Brewery Name:</label>
+          <input type="text" #breweryName value="{{keg.brewery}}">
+        </div>
+        <div class="form-group">
+          <label class="control-label" for="edit_title">Origin:</label>
+          <input type="text" #kegOrigin value="{{keg.origin}}">
+        </div>
+        <div class="form-group">
+          <label class="control-label" for="edit_title">Price:</label>
+          <input type="text" #kegPrice value="{{keg.price}}">
+        </div>
+        <div class="form-group">
+          <label class="control-label" for="edit_title">ABV:</label>
+          <input type="text" #alcoholContent value="{{keg.alcholContent}}">
+        </div>
+        <div class="form-group">
+          <label class="control-label" for="edit_title">Inventory:</label>
+          <input type="text" #kegsLeft value="{{keg.inventory}}">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-info" data-dismiss="modal" type="button" (click)="editKeg(kegName.value, breweryName.value, kegOrigin.value, kegPrice.value, alcoholContent.value, kegsLeft.value, keg)">Post</button>
+        <button type="button" class="btn btn-default" (click)="closeModal(keg)">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

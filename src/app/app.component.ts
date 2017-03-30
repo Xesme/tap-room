@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
 import { KegService } from './keg.service';
+import { EditKegComponent } from './edit-keg/edit-keg.component';
 // declare var firebase:any;
 
 @Component({
@@ -33,6 +34,11 @@ export class AppComponent implements OnInit {
     keg.size = keg.size -4;
 
     this.kegService.sellLgGrowler(keg, keg.size)
+  }
+
+  editKeg($event){
+    // alert($event.brewery);
+    this.kegService.editKeg($event);
   }
 
 }
