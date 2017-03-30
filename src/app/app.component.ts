@@ -61,6 +61,10 @@ export class AppComponent implements OnInit {
     this.kegService.editKeg($event);
   }
 
+  deleteKeg(keg:Keg){
+    this.kegService.deleteKeg(keg);
+  }
+
   openModal(keg){
     console.log(keg)
   }

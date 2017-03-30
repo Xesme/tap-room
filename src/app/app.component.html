@@ -38,7 +38,7 @@
           <app-edit-keg (clickSender)="editKeg($event)" [keg]="keg"></app-edit-keg>
         </div>
         <div class="col-xs-3">
-          <button type="button" class="btn btn-xs btn-primary" (action)="deleteKeg()">Delete</button>
+          <button type="button" class="btn btn-xs btn-primary" (click)="deleteKeg(keg)">Delete</button>
         </div>
       </div>
     </div>

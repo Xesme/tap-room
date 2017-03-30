@@ -52,4 +52,9 @@ export class KegService {
       inventory: event.inv
     })
   }
+
+  deleteKeg(keg){
+    var keginFB = this.findKeg(keg);
+    keginFB.remove()
+  }
 }
