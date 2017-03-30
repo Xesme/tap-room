@@ -4,6 +4,10 @@
   <div *ngFor="let keg of kegs | async" class="panel panel-default">
     <div [class]="checkColor(keg)">
       <div class="panel-heading" (click)="showKeg(keg)">
+        <div class="progress progress-striped active">
+          <div class="progress-bar" style="{{progress(keg)}}"></div>
+          <!-- <div class="progress-bar" style="width: 9%"></div> -->
+        </div>
         <h3><em>{{keg.name}}</em> by <strong>{{keg.brewery}}</strong></h3>
       </div>
       <div class="panel panel-body" *ngIf="selectedKeg == keg.name">

@@ -13,6 +13,7 @@ import { EditKegComponent } from './edit-keg/edit-keg.component';
 export class AppComponent implements OnInit {
   kegs: FirebaseListObservable<any[]>;
   selectedKeg;
+  style;
 
   constructor (private kegService: KegService ) { }
   ngOnInit(){
@@ -81,6 +82,13 @@ export class AppComponent implements OnInit {
 
   openModal(keg){
     console.log(keg)
+  }
+
+  progress(keg) {
+    var progressKeg = (parseInt(keg.size) / 66)*100;
+    var style = "width: " + Math.round(progressKeg) + "%";
+    console.log(style);
+    return style;
   }
 
 }
